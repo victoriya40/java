@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Q20 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter data type to check size (char, int, float, double): ");
+        String type = sc.nextLine().toLowerCase();
+
+        switch(type) {
+            case "char":
+                System.out.println("Size of char: " + Character.BYTES + " bytes");
+                break;
+            case "int":
+                System.out.println("Size of int: " + Integer.BYTES + " bytes");
+                break;
+            case "float":
+                System.out.println("Size of float: " + Float.BYTES + " bytes");
+                break;
+            case "double":
+                System.out.println("Size of double: " + Double.BYTES + " bytes");
+                break;
+            default:
+                System.out.println("Invalid data type");
+        }
+        sc.close();
+    }
+}
